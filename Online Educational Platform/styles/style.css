@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Playfair+Display:wght@700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #120529, #2c104e, #4a2a7f);
+    color: #e5d4ff;
+}
+
+header {
+    background: linear-gradient(90deg, #1e0532, #35075c);
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid #b195ff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: #e5d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffd166;
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+nav ul li a:hover {
+    color: #ffd166;
+    text-shadow: 0 0 15px #ffd166;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2rem;
+}
+
+.hero {
+    position: relative; /* Enable positioning for pseudo-elements */
+    text-align: center;
+    padding: 60px;
+    background: radial-gradient(circle at top, #5c00a6, #1e0532);
+    color: #ffecff;
+    border-radius: 12px;
+    margin: 25px auto;
+    width: 90%;
+    max-width: 1250px;
+    box-shadow: 0 5px 22px rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(15px);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(15px);
+}
+
+#searchBar {
+    width: 70%;
+    max-width: 600px;        
+    padding: 12px 17px;      
+    border-radius: 30px;    
+    border: none;            
+    font-size: 1.1rem;       
+    outline: none;          
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 18px;
+    padding: 25px;
+    scroll-snap-type: x mandatory;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+}
+
+.course-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 18px;
+    border-radius: 10px;
+    min-width: 270px;
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.25);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.course-card:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0.18);
+}
+    
+footer {
+    text-align: center;
+    padding: 18px;
+    background: linear-gradient(135deg, #1e0532, #35075c);
+    color: #b8b2cc;
+    border-top: 2px solid #b195ff;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "instructors": [
+        {
+            "id": 1,
+            "name": "Dr. Orion Sky",
+            "bio": "An expert in modern web technologies with years of experience building dynamic, responsive websites.",
+            "courses": [
+                { "id": 1, "title": "Web Development" }
+            ],
+            "rating": 4.8
+        },
+        {
+            "id": 2,
+            "name": "Professor Elara",
+            "bio": "A seasoned Java developer and full stack engineer with a passion for creating scalable backend systems.",
+            "courses": [
+                { "id": 2, "title": "Java Full Stack" }
+            ],
+            "rating": 4.7
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .course-container {
+        flex-direction: column;
+    }
+}

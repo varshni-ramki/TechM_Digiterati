@@ -1,0 +1,23 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "title": "Web Development",
+            "description": "Learn the fundamentals of modern web development using HTML, CSS, and JavaScript.",
+            "prerequisites": ["Basic Computer Skills", "Understanding of the Internet"],
+            "reviews": [
+                { "user": "Alice", "comment": "Great introduction to web development!" },
+                { "user": "Bob", "comment": "Very well explained and practical." }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Java Full Stack",
+            "description": "Master Java programming along with front-end technologies for full stack development.",
+            "prerequisites": ["Basic Programming", "Understanding of Object-Oriented Programming"],
+            "reviews": [
+                { "user": "Charlie", "comment": "Challenging but very rewarding." }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructors - MysticLearn</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">SkillFusion</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="enrollment.html">Enroll</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="instructor-list">
+      <h2>Our Instructors</h2>
+      <div id="instructorContainer"></div>
+    </section>
+  </main>
+
+  <script>
+    // Load instructors from JSON and display their details
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("data/instructors.json")
+        .then(response => response.json())
+        .then(data => {
+          const container = document.getElementById("instructorContainer");
+          data.instructors.forEach(instructor => {
+            let card = document.createElement("div");
+            card.classList.add("instructor-card");
+            card.innerHTML = `
+              <h3>${instructor.name}</h3>
+              <p>${instructor.bio}</p>
+              <p>Courses: ${instructor.courses.map(c => c.title).join(", ")}</p>
+              <p>Rating: ${instructor.rating} / 5</p>
+            `;
+            container.appendChild(card);
+          });
+        });
+    });
+  </script>
+</body>
+</html>
